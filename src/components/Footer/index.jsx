@@ -1,6 +1,6 @@
 import './Footer.css';
 
-const Header = () => {
+const Footer = () => {
     return(
         <footer className="App-footer">
             <h2>Footer</h2>
@@ -8,4 +8,4 @@ const Header = () => {
     )
 }
 
-export default Header;
+export default Footer;

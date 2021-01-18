@@ -1,15 +1,25 @@
+import { Route, BrowserRouter } from 'react-router-dom';
+import Store from '../Store'
+import Sobre from '../Sobre'
+import FaleConosco from '..FaleConosco/FaleConosco'
+import Header from '../Header'
+import Footer from '../Footer'
+
 import './Body.css'
-import Card from '../Card';
 
 const Body = () => {
-    return(
-        <section className="App-body">
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-        </section>    
-    )
+  return (
+    <main>
+      <BrowserRouter>
+        <Header/>
+        <Route path="/" exact component={Store}/>
+        <Route path="/sobre" component={Sobre}/>
+        <Route path="/fale-conosco" component={FaleConosco}/>
+        <Footer />
+      </BrowserRouter>
+    </main>
+    
+  )
 }
 
-export default Body;
+export default Body
